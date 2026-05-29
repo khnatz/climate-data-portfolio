@@ -6,7 +6,7 @@ using Python — built during my BSc Data Sciences at MS Ramaiah
 University of Applied Sciences.
 
 ## Projects
-- **Project 1** — India Temperature Trend Analysis *(in progress)*
+- **Project 1** — India Temperature Trend Analysis 
 -  **Project 2** — Interactive Climate Dashboard *(coming soon)*
 -  **Project 3** — Monsoon Rainfall Pipeline & Analysis *(coming soon)*
 
