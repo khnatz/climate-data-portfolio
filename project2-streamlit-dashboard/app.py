@@ -22,9 +22,9 @@ html, body, [class*="css"] {
     color: #e8e6e3;
 }
 h1, h2, h3 { font-family: 'DM Serif Display', serif; color: #f5f0e8; }
-.stApp { background-color: #0f1117; }
+.stApp { background-color: #0d1b2a; }
 .finding-card {
-    background: #161b27;
+    background: #132338;
     border-left: 3px solid #e63946;
     border-radius: 0 8px 8px 0;
     padding: 12px 16px;
@@ -34,10 +34,10 @@ h1, h2, h3 { font-family: 'DM Serif Display', serif; color: #f5f0e8; }
     color: #c9c5be;
 }
 .sidebar-header { font-family: 'DM Serif Display', serif; font-size: 1.1rem; color: #f5f0e8; margin-bottom: 8px; }
-[data-testid="stSidebar"] { background-color: #111520; border-right: 1px solid #1e2436; }
+[data-testid="stSidebar"] { background-color: #0d1b2a; border-right: 1px solid #1e2436; }
 div[data-testid="metric-container"] {
     background: #161b27;
-    border: 1px solid #2e3650;
+    border: 1px solid #254560;
     border-radius: 10px;
     padding: 14px;
 }
@@ -149,39 +149,39 @@ fig.patch.set_facecolor('#0f1117')
 ax.set_facecolor('#0f1117')
 
 ax.plot(filtered['Year'], filtered[india_col],
-        color='#f4a261', linewidth=1, alpha=0.45, label='Annual anomaly')
+        color='#e8a030', linewidth=1, alpha=0.45, label='Annual anomaly')
 
 rolling = filtered[india_col].rolling(window=10, center=True).mean()
 ax.plot(filtered['Year'], rolling,
-        color='#e63946', linewidth=2.5, label='10-year rolling average')
+        color='#78c4a8', linewidth=2.5, label='10-year rolling average')
 
 ax.axhline(0, color='#5a6075', linewidth=0.9, linestyle='--')
 ax.fill_between(filtered['Year'], filtered[india_col], 0,
-                where=filtered[india_col] > 0, alpha=0.12, color='#e63946')
+                where=filtered[india_col] > 0, alpha=0.12, color='#d64e1e')
 ax.fill_between(filtered['Year'], filtered[india_col], 0,
-                where=filtered[india_col] < 0, alpha=0.12, color='#4575b4')
+                where=filtered[india_col] < 0, alpha=0.12, color='#3a9bcc')
 
 # Decade shading
-for dec, shade_col in [(decade_a, '#4fc3f7'), (decade_b, '#a5d6a7')]:
+for dec, shade_col in [(decade_a, '#b8d4e8'), (decade_b, '#d4a870')]:
     ax.axvspan(dec, dec + 9, alpha=0.08, color=shade_col)
     ylim = ax.get_ylim()
     ax.text(dec + 4.5, ylim[0] + 0.03, f"{dec}s",
             ha='center', fontsize=8, color=shade_col, alpha=0.85)
 
-ax.set_xlabel('Year', fontsize=11, color='#9ea3b0')
-ax.set_ylabel('Temperature Anomaly (°C)', fontsize=11, color='#9ea3b0')
+ax.set_xlabel('Year', fontsize=11, color='#6a9ab8')
+ax.set_ylabel('Temperature Anomaly (°C)', fontsize=11, color='#6a9ab8')
 ax.tick_params(colors='#9ea3b0', labelsize=10)
 for spine in ax.spines.values():
-    spine.set_edgecolor('#2e3650')
+    spine.set_edgecolor('#254560')
 ax.legend(fontsize=10, framealpha=0, labelcolor='#c9c5be')
 ax.annotate('Baseline: 1951–1980 average', xy=(0.01, 0.03),
-            xycoords='axes fraction', fontsize=8, color='#5a6075')
+            xycoords='axes fraction', fontsize=8, color='#254560')
 plt.tight_layout()
 
 st.pyplot(fig)
 
 buf = io.BytesIO()
-fig.savefig(buf, format='png', dpi=150, facecolor='#0f1117')
+fig.savefig(buf, format='png', dpi=150, facecolor='#0d1b2a')
 buf.seek(0)
 st.download_button(
     label="⬇ Download Chart as PNG",
