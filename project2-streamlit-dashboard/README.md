@@ -1,6 +1,6 @@
 # Project 2 — Streamlit Interactive Climate Dashboard
 
-An interactive web dashboard for exploring India's temperature anomaly trends, built on top of the NASA GISS GISTEMP v4 dataset analysed in [Project 1](../project1-india-temperature/).
+An interactive web dashboard (https://project2-dashboard.streamlit.app/) for exploring India's temperature anomaly trends, built on top of the NASA GISS GISTEMP v4 dataset analysed in [Project 1](../project1-india-temperature/).
 
 ---
 
