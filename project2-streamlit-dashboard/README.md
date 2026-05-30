@@ -78,11 +78,3 @@ project2-streamlit-dashboard/
 
 ---
 
-## Part of
-
-[climate-data-portfolio](https://github.com/khnatz/climate-data-portfolio) — a portfolio of data science projects built on real-world climate datasets.
-
-| Project | Description |
-|---|---|
-| [Project 1](../project1-india-temperature/) | India Temperature Trend Analysis — EDA + 3 publication-quality plots |
-| **Project 2** | **Streamlit Interactive Dashboard — this project** |
