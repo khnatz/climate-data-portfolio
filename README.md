@@ -7,7 +7,7 @@ University of Applied Sciences.
 
 ## Projects
 - **Project 1** — India Temperature Trend Analysis 
--  **Project 2** — Interactive Climate Dashboard *(coming soon)*
+-  **Project 2** — Interactive Climate Dashboard 
 -  **Project 3** — Monsoon Rainfall Pipeline & Analysis *(coming soon)*
 
 ## Tools & Skills
